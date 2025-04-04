@@ -1,0 +1,130 @@
+body{
+    background-color: #F2EFE7;
+}
+
+#main-section{
+    background-color: #006A71;
+    max-width: 1400px;
+    margin: 0 auto;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.container{
+    width: 800px;
+    margin: 0 auto;
+    padding: 50px;
+    gap: 20px;
+
+}
+
+.container h1{
+    color: #FFFFFF;
+    font-size: 30px;
+}
+
+.container form input[type = "text"]{
+    width: 250px;
+    padding: 10px;
+    border: none;
+    outline: none ;
+    border-radius: 5px;
+    font-size: 16px;
+    margin-top: 15px;
+}
+
+.container form button[type = "submit"]{
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    outline: none ;
+    background-color: #FFA725;
+    color: #FFFFFF;
+    margin-left: 10px;
+}
+
+#main-container{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+#main-container .stats{
+    display: flex;
+    gap: 20px;
+    justify-content: space-between;
+}
+
+.stats li {
+    color: #FFFFFF;
+    font-size: 18px;
+    
+}
+
+/* todos stylies  */
+
+.todos li{
+    background-color: white;
+    border-radius: 10px;
+    margin-bottom: 16px;
+    padding: 20px 16px ;
+    display: flex;
+    justify-content: space-between;
+}
+
+.todos li div{
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.todos li.complete{
+    background-color: #AFDDFF ;
+    text-decoration: line-through;
+    color: #E83F25;
+}
+
+input[type = "checkbox"]{
+    appearance: none;
+    background-color: transparent;
+    margin: 0;
+    width: 20px;
+    height: 20px;
+    border: 2px solid #123458;
+    border-radius: 100%;
+    display: grid;
+    place-items: center;
+}
+
+input[type = "checkbox"]::before{
+    content:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 448 512'%3E%3C!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--%3E%3Cpath d='M438.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L160 338.7 393.4 105.4c12.5-12.5 32.8-12.5 45.3 0z'/%3E%3C/svg%3E"); 
+
+    transform: scale(0);
+    transition: all .2s ease-in-out;
+}
+
+input[type = "checkbox"]:checked{
+    background-color: #E83F25;
+    border-color: #E83F25;
+}
+
+input[type = "checkbox"]:checked::before{
+    transform: scale(1);
+}
+
+.todos li button {
+    border: 0;
+    padding: 0.25rem;
+    display: grid;
+    place-content: center;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.todos li button i {
+    width: 1.25rem;
+    height: 1.25rem;
+}
